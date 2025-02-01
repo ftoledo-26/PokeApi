@@ -2,16 +2,19 @@ const listaPokemon = document.querySelector('#listaPokemon');
 let URL = "https://pokeapi.co/api/v2/pokemon/";
 
 
- function fetchPokemons() {
-    for (let i = 1; i <= 151; i++) {
-            const response =  fetch(URL + id);
-            const data =  response.json();
-            mostrarPokemon(data);
-    }
 
+let i = 1;
+function GeneracionURL() {
+    if (i <= 151) {
+        fetch(URL + i)
+            .then(response => response.json())
+            .then(data => {mostrarPokemon(data)});
+             setTimeout(GeneracionURL, 1);    
+            i++;
     }
+}
 
-fetchPokemons();
+GeneracionURL();
 
 function mostrarPokemon(poke) {
     let tipos = poke.types.map((type) => `<p class="${type.type.name}">${type.type.name}</p>`);
@@ -22,7 +25,7 @@ function mostrarPokemon(poke) {
     div.classList.add('pokemon_container');
     div.innerHTML = `<div class="pokemon_container">
                         <div class="pokemon_imagen">
-                            <img src="${poke.sprites.other["official-artwork"].front_default}" alt="${poke.name}">
+                            <img src="${poke.sprites.other["official-artwork"].front_default}" alt="${poke}">
                         </div>
                     <div class="pokemon_inforacion">
                         <div class="nombre_container">
