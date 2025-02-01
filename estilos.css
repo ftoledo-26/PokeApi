@@ -1,0 +1,343 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+/*
+*pagina principal
+*/
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/*
+*pagina Pokedex
+*/
+.pokedex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    background-color: #e0e0e0;
+    color: white;
+    text-align: center;
+    padding: 10px
+}
+header .nav_tipos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+header .lista_tipos{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+header .lista_tipos{
+    #Roca{
+        background-color: #b8a038;
+    }#Boton_Todos{
+        background-color: transparent;
+    }#Normal{
+        background-color: #a8a878;
+    }#Volador{
+        background-color: #a890f0;
+    }#Veneno{
+        background-color: #a040a0;
+    }#Hada{
+        background-color: #ee99ac;
+    }#Acero{
+        background-color: #b8b8d0;
+    }#Fuego{
+        background-color: #f08030;
+    }#Agua{
+        background-color: #6890f0;
+    }#Planta{
+        background-color: #78c850;
+    }#Electrico{
+        background-color: #f8d030;
+    }#Hielo{
+        background-color: #98d8d8;
+    }#Lucha{
+        background-color: #c03028;
+    }#Tierra{
+        background-color: #e0c068;
+    }#Psiquico{
+        background-color: #f85888;
+    }#Bicho{
+        background-color: #a8b820;
+    }#Fantasma{
+        background-color: #705898;
+    }#Dragon{
+        background-color: #7038f8;
+    }#Siniestro{
+        background-color: #705848;
+    }#Insecto{
+        background-color: #a8b820;
+    }
+}
+header .lista_tipos button{
+    border: transparent;
+    border-radius: 20px;
+    padding: .9rem ;
+    text-transform: uppercase;
+    font-weight: 900;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+header .lista_tipos button:hover{
+    cursor: pointer;
+}
+
+
+
+.pokemon{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 20px;
+    gap: 6rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+} 
+
+.pokemon_container{
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    
+    text-transform: uppercase;
+}
+
+.pokemon_imagen img{
+    width: 100%;
+    max-width: 300px;
+}
+
+.pokemon_inforacion{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+.pokemon_inforacion .nombre_container{
+    display: flex;
+    align-items: center;
+    column-gap: .05rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.id_pokemon{
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.pokemon .pokemon_tipos {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.pokemon_tipos p{
+    padding: 5px;
+    border-radius: 10px;
+    gap: 10px;
+}
+.pokemon_stats{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    
+}
+.stat{
+    background-color: #ebebeb;
+    border-radius: 50px;
+
+}   
+
+
+.pagina2{
+    background-color: rgb(241, 237, 237);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*Partes co0munes
+*/
+header a{
+    color: white;
+    text-decoration: none;
+}
+header nav ul{
+    list-style: none;
+    padding: 0;
+}
+header nav ul li{
+    padding: 10px;
+    display: inline;
+    list-style: none;
+}
+main{
+    flex: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+footer{
+    background-color: red;
+    color: white;
+}
+
+
+
+
+
+.tipo {
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.pokemon-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: .85rem;
+}
+
+.stat {
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+
+
+.normal {
+    background-color: #a8a878;
+    color: black;
+}
+
+.fire {
+    background-color: #f08030;
+    color: black;
+}
+
+.water {
+    background-color: #6890f0;
+    color: white;
+}
+
+.grass {
+    background-color: #78c850;
+    color: black;
+}
+
+.electric {
+    background-color: #f8d030;
+    color: black;
+}
+
+.ice {
+    background-color: #98d8d8;
+    color:black;
+}
+
+.fighting {
+    background-color: #c03028;
+    color: white;
+}
+
+.poison {
+    background-color: #a040a0;
+    color: white;
+}
+
+.ground {
+    background-color: #e0c068;
+    color:black;
+}
+
+.flying {
+    background-color: #a890f0;
+    color: black;
+}
+
+.psychic {
+    background-color: #f85888;
+    color: black;
+}
+
+.bug {
+    background-color: #a8b820;
+    color: black;
+}
+
+.rock {
+    background-color: #b8a038;
+    color: black;
+}
+
+.ghost {
+    background-color: #705898;
+    color: white;
+}
+
+.dark {
+    background-color: #705848;
+    color: white;
+}
+
+.dragon {
+    background-color:#7038f8;
+    color: white;
+}
+
+.steel {
+    background-color: #b8b8d0;
+    color: black;
+}
+
+.fairy {
+    background-color: #ee99ac;
+    color: black;
+}
+
+
+
