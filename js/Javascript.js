@@ -10,7 +10,7 @@ function GeneracionURL() {
             .then(response => response.json())
             .then(data => {mostrarPokemon(data)});
              setTimeout(GeneracionURL, 1);    
-
+        i++;
     }
 }
 GeneracionURL();
