@@ -13,13 +13,6 @@ function GeneracionURL() {
 
     }
 }
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-addEventListenera
-addEventListeneraa
-
-addEventListeneraaa
-
-addEventListeneraaaa
 GeneracionURL();
 
 function mostrarPokemon(poke) {
