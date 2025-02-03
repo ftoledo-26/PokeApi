@@ -5,7 +5,7 @@ let URL = "https://pokeapi.co/api/v2/pokemon/";
 
 let i = 1;
 function GeneracionURL() {
-    if (i <= 151) {
+    if (i <= 152) {
         fetch(URL + i)
             .then(response => response.json())
             .then(data => {mostrarPokemon(data)});
