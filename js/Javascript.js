@@ -35,7 +35,7 @@ function mostrarPokemon(poke) {
                             ${tipos}
                         </div>
                         <div class="pokemon_stats">
-                            <p class="stat">${poke.height + "m"}</p>
+                            <p class="stat">${poke.height/10 + "m"}</p>
                             <p class="stat">${poke.weight/10 + "kg"}</p>
                         </div>
                     </div>
